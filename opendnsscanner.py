@@ -95,7 +95,7 @@ if __name__ == '__main__':
         for host in subnet.hosts():
             send_dns_query(str(host),openresolvers)
 
-    sock.settimeout(2) # final cleanip
+    sock.settimeout(2) # last chance for responses
     send_dns_query(None,openresolvers)
 
     # Close the socket
